@@ -1,0 +1,32 @@
+h1 {
+    color: goldenrod;
+}
+
+body {
+    background-image: url('alexander-grey-fSlCxR0dnZY-unsplash.jpg');
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#message-el {
+    font-style: italic;
+    color: white;
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}
+
+button {
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5%;
+    color: #016f32;
+    padding: 5px 25px;
+    font-weight: bold;
+    width: 150px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
