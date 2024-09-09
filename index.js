@@ -9,6 +9,9 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let newCardEl = document.getElementById("newCard-el");
+let moneyEl = document.getElementById("money-el");
+let totalMoney = 0;
+
 
 function getRandomNumber() {
    return Math.ceil(Math.random() * 13) + 1
@@ -26,12 +29,17 @@ function renderGame() {
 
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
+        moneyEl.textContent = "MONEY EARNED: " + totalMoney
         message = "Do you want to draw another card?"
     } else if (sum === 21) {
         message = "You've got blackjack!"
-        hasBlackJack = true
+        totalMoney += 500
+        moneyEl.textContent = "MONEY EARNED: " + totalMoney
+        hasBlackJack = true 
     } else {
         message = "You're out of the game"
+        totalMoney = totalMoney - 250
+        moneyEl.textContent = "MONEY EARNED: " + totalMoney
         isAlive = false
     }
     messageEl.textContent = message
@@ -56,4 +64,5 @@ function newCard() {
 function newGame() {
     location.reload()
     }
+     
 
